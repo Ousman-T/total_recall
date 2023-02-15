@@ -94,7 +94,6 @@ console.log(favMovies[14]);
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
-// NOT DONE YET NEED TO ACCESS INDEX OF WALDO
 const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
                     ["Lucinda", "Jacc", "Neff", "Snoop"],
                     ["Petunia", ["Baked Goods", "Waldo"]]];
