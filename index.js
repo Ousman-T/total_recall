@@ -165,40 +165,195 @@ if(monkey < 5){
     console.log("monkey!");
 }console.log(monkey);
 // H. What's in Your Closet?
-//_____________________________________________________________
+// Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript.
+
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "GA hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+]; 
+console.log ("Kristyn is rocking that " + kristynsCloset[2] + " today!");
+kristynsCloset.splice(6, 0, "raybans"); 
+kristynsCloset[5] = "stained knit hat";
+console.log(kristynsCloset);
+
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],[
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs"
+  ],[
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans"
+  ]
+];
+console.log(thomsCloset[0][0]);
+console.log(thomsCloset[1][1]);
+console.log(thomsCloset[2][2]);
+
+console.log("Thom is looking fierce in a " + thomsCloset[0][0] + ", " + thomsCloset[1][1] + " and " + thomsCloset[2][2] + "!");
+thomsCloset[1][2] = "Footie Pajamas";
+
+
+
+// SECTION 4 (FUNCTIONS)
+
+// Part A. PrintGreeting
+
+const printGreeting = (name) => {
+ return "Hello there, " + name + "!";
+};
+console.log(printGreeting("Slimer"));
+
+// Part B. PrintCool
+
+const printCool = (argument) => {
+ return argument + " is cool";
+};
+console.log(printCool("Captain Reynolds"));
+
+
+// Part C. CalculateCube
+
+const calculateCube = (singleNumber) => {
+ return singleNumber * singleNumber * singleNumber;
+}
+console.log(calculateCube(5));
+
+// Part D. isVowel 
+
+const isAVowel = (character) => {
+ if (character === "a" || character === "A" || character === "e" || character === "E" || character === "i" || character === "I" || character === "o" || character === "O" || character === "u" || character === "U"){
+     return true;
+ } else {
+     return false;
+ }
+};
+console.log(isAVowel("a"));
+
+
+// Part E. getMultipleLengths
+
+const getMultipleLengths = (strArr) => {
+ const multipleLengthArray = [];
+ for (f = 0; f < strArr.length; f++){
+     multipleLengthArray.push(strArr[f].length);
+ };
+ return multipleLengthArray;
+};
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+
+
+// Part G. maxofThree
+
+const maxOfThree = (number1, number2, number3) => {
+ const threeNumArray = [number1, number2, number3];
+ threeNumArray.sort(function(a, b){return a - b});
+ return threeNumArray[2];
+};
+console.log(maxOfThree(6, 9, 1));
+
+
+// Part H. printLongestWord
+
+const printLongestWord = (strArray) => {
+ let longestWord = '';
+ for (let g = 0; g < strArray.length; g++){
+     if (strArray[g].length > longestWord.length){
+         longestWord = strArray[g];
+     }
+ };
+ return longestWord;
+};
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 
 
 
 
+// SECTION 4 (OBJECTS)
+
+// Part A. Make a user object
+
+const user = {
+ name: "Mahamadou",
+ email: "mahamadou12",
+ age: 26,
+ purchased: [],
+}; 
+
+// Part B. Update the user
+user.email = "mtouray12"
+user.age++;
+console.log(user);
+
+// // Part C. Adding keys and values 
+user.location = "East Orange"
+
+// // Part D. Shopaholic!
+
+user.purchased.push("carbohydrates");
+user.purchased.push("peace of mind");
+user.purchased.push("Merino jodhpurs");
+
+console.log(user.purchased[2]);
+
+
+// Part E.
+
+user.friend = {
+ name: "Grace Hopper",
+ age: 85,
+ location: "East Orange",
+ purchased: [], 
+}; 
+console.log(user.friend.name);
+console.log(user.friend.location);
+user.friend.age -= 30;
+console.log(user.friend.age);
+user.friend.purchased.push("The One Ring");
+user.friend.purchased.push("A latte");
+console.log(user.friend.purchased);
+console.log(user.friend.purchased[1]);
+
+
+// Part F. Loops
+
+for (let i = 0; i < user.purchased.length; i++) {
+ console.log(user.purchased[i]);
+}
+
+for (let i = 0; i < user.friend.purchased.length; i++) {
+ console.log(user.friend.purchased[i]);
+}
 
 
 
 
-// IV. Functions
-// A.
-// B.
-// C.
-// D.
-// E.
-// F.
-// G.
-// H.
-//_____________________________________________________________
+// Part G. Functions can operate on objects
 
-
-
-
-
-
-// V. Objects
-// A.
-// B.
-// C.
-// D.
-// E.
-// F.
-// G.
-//_____________________________________________________________
-
-
-// Extra
+function updateUser() {
+    user.age++,
+    user.name.toupperCase();
+}
+function oldAndLoud(person) {
+    person.age++;
+    person.name = person.name.toupperCase();
+}
+oldAndLoud(user);
+console.log(user);

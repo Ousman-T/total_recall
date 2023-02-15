@@ -101,21 +101,19 @@ const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
 console.log(whereIsWaldo[1].splice);
 whereIsWaldo[2] = ["Lucinda", "Jacc", "No one", "Snoop"];
 console.log(whereIsWaldo[2]);
-console.log(whereIsWaldo[3]);
+console.log(whereIsWaldo[3][1][1]);
 
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
-// NOT DONE YET NEED TO RANDOMIZE STRING SELECTION
+
 kittyWords = "Love me, pet me! HSSSSSSS!";
-string1 = "...human... why are you taking pictures of me?...";
-string2 = "...the catnip made me do it...";
-string3 =  "...why does the red dot always get away...";
+kittyTalk = ["...human... why are you taking pictures of me?...", "...the catnip made me do it...","...why does the red dot always get away..."];
 
 for(let i = 0; i < 20; i++){
     console.log(i + kittyWords);
     if(i % 2 === 0){
-        console.log(string1 || string2 || string3);
+        console.log(kittyTalk[Math.floor(Math.random()* kittyTalk.length)]);
     }
 }
 
@@ -123,7 +121,11 @@ for(let i = 0; i < 20; i++){
 //  Find the Median
 ////////////////////////////////
 const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
-console.log(nums.length);
+numsInOrder = nums.sort();
+console.log(numsInOrder);
+const medianIndex = Math.floor((0 + nums.length) / 2);
+console.log(nums[medianIndex]);
+
 
 // Expected output:
 // => 15
