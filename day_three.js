@@ -108,3 +108,29 @@ const repeatEat = () => {
     realWorkOut();
     console.log(timmy);
 
+
+    // Dinna Fuu
+    class Dinner {
+        constructor(appetizer, entree, dessert) {
+            this.appetizer = appetizer;
+            this.entree = entree;
+            this.dessert = dessert;
+        }
+    }
+    
+    class Chef {
+        dinners = [];
+    
+        chefDinner(appetizer, entree, dessert) {
+            const dinner = new Dinner(appetizer, entree, dessert);
+            this.dinners.push(dinner);
+        }
+    }
+    
+    const chef = new Chef();
+    chef.chefDinner("Chicken Nuggets", "Steak", "Ice cream");
+    chef.chefDinner("Breadsticks", "Pasta", "Cheesecake");
+    chef.chefDinner("Fries", "Chicken", "Pudding");
+    
+    console.log(chef.dinners);
+    
