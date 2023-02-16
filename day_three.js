@@ -56,29 +56,11 @@ class Person {
         this.bankAccount -= hamster.getPrice()
     }
 }
-const timmy = new Person('Timmy')
-for(let i =0; i < 5; i++){
-  timmy.ageUp()
-  console.log(timmy.ageUp());
-}
-for(let i =0; i < 5; i++){
-  timmy.eat()
-}
-for(let i =0; i < 5; i++){
-  timmy.exercise()
-}
-for(let i =0; i < 9; i++){
-  timmy.ageUp()
-}
-const gus = new Hamster('Gus')
-gus.owner = 'Timmy'
-timmy.buyHamster(gus)
-
-for(let i =0; i < 15; i++){
-  timmy.ageUp()
-}
-timmy.eat();
-timmy.eat();
-timmy.exercise();
-timmy.exercise();
-timmy.ageUp();
+const timmy = new Person("Timmy");
+const repeatEat = () => {
+    for(let i = 0; i < 5; i++){
+        timmy.ageUp();
+    }
+};
+repeatEat();
+console.log(timmy);
