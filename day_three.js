@@ -61,6 +61,50 @@ const repeatEat = () => {
     for(let i = 0; i < 5; i++){
         timmy.ageUp();
     }
-};
-repeatEat();
-console.log(timmy);
+}
+    const repeatWorkOut = () => {
+        for(let i = 0; i < 5; i++){
+            timmy.exercise();
+        }
+    }
+    const bigBoy = () => {
+        for(let i = 0; i < 9; i++){
+            timmy.ageUp();
+        }
+    }
+    const teenageTimmy = () => {
+        for(let i = 0; i < 15; i++){
+            timmy.ageUp();
+        }
+    }
+    const eatTwiceTim = () => {
+        for(let i = 0; i < 2; i++){
+            timmy.eat();
+        }
+    }
+    const realWorkOut = () => {
+        for(let i = 0; i < 2; i++){
+            timmy.exercise();
+        }
+    }
+
+    
+    repeatEat();
+    console.log(timmy);
+    repeatWorkOut();
+    console.log(timmy);
+    bigBoy();
+    console.log(timmy);
+    const gus = new Hamster("Gus");
+    console.log(timmy);
+    gus.owner = "Timmy";
+    console.log(gus);
+    timmy.buyHamster(gus);
+    console.log(timmy);
+    teenageTimmy();
+    console.log(timmy);
+    eatTwiceTim();
+    console.log(timmy);
+    realWorkOut();
+    console.log(timmy);
+
